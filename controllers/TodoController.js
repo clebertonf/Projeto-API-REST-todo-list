@@ -1,11 +1,12 @@
+const rescue = require('express-rescue');
 const TodoService = require('../services/TodoServices');
 
-const createTodo = async (req, resp) => {
+const createTodo = rescue(async (req, resp) => {
   const { text } = req.body;
 
   await TodoService.createTodo(text);
   resp.status(200).json({ message: 'ok' });
-};
+});
 
 const listTodos = async (req, resp) => {
   const todos = await TodoService.listTodos();
