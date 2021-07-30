@@ -1,15 +1,15 @@
 const TodoModel = require('../models/todoModel');
 const TodoSchema = require('../schemas/todoSchema');
 
+const listTodos = async () => {
+  const todos = await TodoModel.listTodosBank();
+  return todos;
+};
+
 const createTodo = async (text) => {
   TodoSchema.validateTodo(text);
   await TodoModel.createTodoBank(text);
   return true;
-};
-
-const listTodos = async () => {
-  const todos = await TodoModel.listTodosBank();
-  return todos;
 };
 
 const editTodo = async (id, text) => {
@@ -18,8 +18,14 @@ const editTodo = async (id, text) => {
   return true;
 };
 
+const deleteTodo = async (id) => {
+  await TodoModel.deleteTodoBank(id);
+  return true;
+};
+
 module.exports = {
   listTodos,
   createTodo,
   editTodo,
+  deleteTodo,
 };

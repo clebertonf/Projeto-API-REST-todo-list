@@ -26,16 +26,18 @@ const listTodosBank = async () => {
 const editTodoBank = async (id, text) => {
   try {
     await connection()
-      .then((db) => db.collection('to-do-collection').updateOne({ _id: ObjectId(id) }, { $set: { text } }));
+      .then((db) => db.collection('to-do-collection')
+        .updateOne({ _id: ObjectId(id) }, { $set: { text } }));
   } catch (err) {
     console.log(err);
     throw err;
   }
 };
 
-const deleteTodoBank = async () => {
+const deleteTodoBank = async (id) => {
   try {
-
+    await connection()
+      .then((db) => db.collection('to-do-collection').deleteOne({ _id: ObjectId(id) }));
   } catch (err) {
     console.log(err);
     throw err;
@@ -46,4 +48,5 @@ module.exports = {
   createTodoBank,
   listTodosBank,
   editTodoBank,
+  deleteTodoBank,
 };

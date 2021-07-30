@@ -23,7 +23,7 @@ const editTodo = rescue(async (req, resp) => {
 const deleteTodo = rescue(async (req, resp) => {
   const { id } = req.body;
 
-  await TodoService.editTodo(id);
+  await TodoService.deleteTodo(id);
   resp.status(200).json({ message: 'Successfully deleted' });
 });
 
