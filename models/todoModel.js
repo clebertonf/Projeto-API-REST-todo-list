@@ -1,9 +1,10 @@
 const connection = require('./connection');
 
-const createTodoBank = async () => {
+const createTodoBank = async (text) => {
   try {
     const createTodo = await connection()
-      .then((db) => db.collection('to-do-collection').insertOne({}));
+      .then((db) => db.collection('to-do-collection').insertOne({ text }));
+    return true;
   } catch (err) {
     console.log(err);
   }
@@ -12,7 +13,7 @@ const createTodoBank = async () => {
 const listTodosBank = async () => {
   try {
     const todos = await connection()
-      .then((db) => db.collection('to-do=collection').find({}).toArray());
+      .then((db) => db.collection('to-do-collection').find({}).toArray());
     return todos;
   } catch (err) {
     console.log(err);
