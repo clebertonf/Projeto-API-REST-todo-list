@@ -12,7 +12,14 @@ const listTodos = async () => {
   return todos;
 };
 
+const editTodo = async (id, text) => {
+  TodoSchema.validateTodo(text);
+  await TodoModel.editTodoBank(id, text);
+  return true;
+};
+
 module.exports = {
   listTodos,
   createTodo,
+  editTodo,
 };

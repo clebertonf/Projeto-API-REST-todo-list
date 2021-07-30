@@ -1,12 +1,14 @@
+const { ObjectId } = require('mongodb');
 const connection = require('./connection');
 
 const createTodoBank = async (text) => {
   try {
-    const createTodo = await connection()
+    await connection()
       .then((db) => db.collection('to-do-collection').insertOne({ text }));
     return true;
   } catch (err) {
     console.log(err);
+    throw err;
   }
 };
 
@@ -17,14 +19,17 @@ const listTodosBank = async () => {
     return todos;
   } catch (err) {
     console.log(err);
+    throw err;
   }
 };
 
-const editTodoBank = async () => {
+const editTodoBank = async (id, text) => {
   try {
-
+    await connection()
+      .then((db) => db.collection('to-do-collection').updateOne({ _id: ObjectId(id) }, { $set: { text } }));
   } catch (err) {
     console.log(err);
+    throw err;
   }
 };
 
@@ -33,10 +38,12 @@ const deleteTodoBank = async () => {
 
   } catch (err) {
     console.log(err);
+    throw err;
   }
 };
 
 module.exports = {
   createTodoBank,
   listTodosBank,
+  editTodoBank,
 };
