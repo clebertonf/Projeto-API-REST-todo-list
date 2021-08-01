@@ -71,3 +71,11 @@ Crie um arquivo com nome **`.env`** na raiz do projeto, dentro deste arquivo adi
 
 ![arquivo-env](./public/imgs/02-arquivo-env.png)
 
+## Executando API
+
+Verifique o `package.json`, la se encontram scripts para execução do projeto.
+
+- `"debug": "nodemon index.js",`  (`npm run dev`) inicia o projeto com nodemon.
+- `"start": "node index.js",` (`npm start`) inicia o projeto com  node.
+
+## Após todos os passos execute npm run dev na raiz para iniciar o projeto.
