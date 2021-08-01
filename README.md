@@ -3,9 +3,9 @@
 Olá seja bem vindo ao repositorio do projeto API todo list (lista de afazeres). :rocket:
 
 Este projeto consiste em uma API no padrão REST de uma aplicação de lista de afazeres,
-esta API e consumida por um front-end em React. Utilizei a arquitetura `MSC` para construir esta api, de forma que sua `manutenção e adição de novas funcionalidade`s ficam mais faceis de se implementar.
+esta API e consumida por um front-end em React. Utilizei a arquitetura `MSC` para construir esta api, de forma que sua `manutenção e adição de novas funcionalidades` ficam mais faceis de se implementar.
 
-Sua estrutura interna de arquivos esta dividida Por `papel técnico`.
+Sua estrutura interna de arquivos esta dividida por `papel técnico`.
 
 Fique a vontade para contribuir, será um prazer interagir com você!
 
