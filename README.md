@@ -50,3 +50,24 @@ Fique a vontade para contribuir, será um prazer interagir com você!
   - Express
 
 ## Começando
+
+#### Para executar o projeto, será necessário ter instalado:
+
+1. [MongoDB](https://www.mongodb.com/try/download/community) banco utilizado para o desenvolvimento
+2. [Insomnia](https://insomnia.rest/download) para fazer requisições nas rotas da API. (ou qualquer outro para testes de API)
+3. [NodeJS](https://nodejs.org/en/) Este projeto necessita do NodeJs instalado em seu computador para rodar localmente.
+
+#### proximos passos
+
+- Clone o repositório `git clone git@github.com:clebertonf/Projeto-API-REST-todo-list.git`
+- Na raiz do projeto rode o comando **npm install** para instalar as depedências do projeto.
+
+## Configuracão
+
+Crie um arquivo com nome **`.env`** na raiz do projeto, dentro deste arquivo adicione as seguintes variáveis de ambiente:
+
+1. `PORT`=3000
+2. `MONGO_DB_URL` = 'mongodb://127.0.0.1:27017'
+
+![arquivo-env](./public/imgs/02-arquivo-env.png)
+
