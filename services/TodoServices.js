@@ -15,10 +15,10 @@ const createTodo = async (text) => {
 
 const editTodo = async (id, text) => {
   TodoSchema.validateTodo(text);
-  const { matchedCount } = await TodoModel.editTodoBank(id, text);
+  const { matchedCount, todoEdit } = await TodoModel.editTodoBank(id, text);
 
   if (matchedCount === 0) throw notFound('task not found');
-  return true;
+  return todoEdit;
 };
 
 const deleteTodo = async (id) => {

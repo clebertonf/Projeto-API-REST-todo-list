@@ -5,9 +5,8 @@ const createTodoBank = async (text) => {
   try {
     const { insertedId } = await connection()
       .then((db) => db.collection('to-do-collection').insertOne({ text }));
-    const todo = await connection()
+    return await connection()
       .then((db) => db.collection('to-do-collection').find({ _id: insertedId }).toArray());
-    return todo;
   } catch (err) {
     console.log(err);
     throw err;
@@ -16,9 +15,8 @@ const createTodoBank = async (text) => {
 
 const listTodosBank = async () => {
   try {
-    const todos = await connection()
+    return await connection()
       .then((db) => db.collection('to-do-collection').find({}).toArray());
-    return todos;
   } catch (err) {
     console.log(err);
     throw err;
@@ -27,10 +25,12 @@ const listTodosBank = async () => {
 
 const editTodoBank = async (id, text) => {
   try {
-    const editTodo = await connection()
+    const { matchedCount } = await connection()
       .then((db) => db.collection('to-do-collection')
         .updateOne({ _id: ObjectId(id) }, { $set: { text } }));
-    return editTodo;
+    const todoEdit = await connection()
+      .then((db) => db.collection('to-do-collection').find({ _id: ObjectId(id) }).toArray());
+    return { matchedCount, todoEdit };
   } catch (err) {
     console.log(err);
     throw err;
@@ -39,9 +39,8 @@ const editTodoBank = async (id, text) => {
 
 const deleteTodoBank = async (id) => {
   try {
-    const deleteTodo = await connection()
+    return await connection()
       .then((db) => db.collection('to-do-collection').deleteOne({ _id: ObjectId(id) }));
-    return deleteTodo;
   } catch (err) {
     console.log(err);
     throw err;
