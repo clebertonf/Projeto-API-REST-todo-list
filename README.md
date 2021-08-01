@@ -30,3 +30,23 @@ Fique a vontade para contribuir, será um prazer interagir com você!
 
 7. Pasta public/imgs contém as imagens utilizadas no projeto.
 
+## tecnologias utilizadas
+
+- Linguagens:
+  - NodeJs
+- Database: 
+  - Mongodb
+- Tratamento de erros:
+  - hapi/boom
+  - express-rescue
+  - joi
+- Configurações
+  - Dotenv
+- Organização e Padronização de codigo:
+  - Eslint / config-airbnb-base
+- Facilitador de desenvolvimento:
+  - nodemon
+- framework's:
+  - Express
+
+## Começando
