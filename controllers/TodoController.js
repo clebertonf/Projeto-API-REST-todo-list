@@ -9,8 +9,8 @@ const listTodos = async (req, resp) => {
 const createTodo = rescue(async (req, resp) => {
   const { text } = req.body;
 
-  await TodoService.createTodo(text);
-  resp.status(200).json({ message: 'Successfully created' });
+  const todo = await TodoService.createTodo(text);
+  resp.status(200).json({ message: 'Successfully created', todo });
 });
 
 const editTodo = rescue(async (req, resp) => {

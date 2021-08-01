@@ -78,4 +78,8 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
 - `"debug": "nodemon index.js",`  (`npm run dev`) inicia o projeto com nodemon.
 - `"start": "node index.js",` (`npm start`) inicia o projeto com  node.
 
-## Após todos os passos execute npm run dev na raiz para iniciar o projeto.
+#### Após todos os passos execute npm run dev na raiz para iniciar o projeto.
+
+## Endpoints da API (Criação, leitura, edição, deleção de tarefa)
+
+1. #### `POST` 

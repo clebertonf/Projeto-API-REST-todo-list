@@ -3,9 +3,11 @@ const connection = require('./connection');
 
 const createTodoBank = async (text) => {
   try {
-    await connection()
+    const { insertedId } = await connection()
       .then((db) => db.collection('to-do-collection').insertOne({ text }));
-    return true;
+    const todo = await connection()
+      .then((db) => db.collection('to-do-collection').find({ _id: insertedId }).toArray());
+    return todo;
   } catch (err) {
     console.log(err);
     throw err;

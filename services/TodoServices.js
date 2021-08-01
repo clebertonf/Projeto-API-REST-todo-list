@@ -8,8 +8,8 @@ const listTodos = async () => {
 
 const createTodo = async (text) => {
   TodoSchema.validateTodo(text);
-  await TodoModel.createTodoBank(text);
-  return true;
+  const todo = await TodoModel.createTodoBank(text);
+  return todo;
 };
 
 const editTodo = async (id, text) => {
