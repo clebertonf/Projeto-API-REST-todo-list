@@ -1,3 +1,4 @@
+const { notFound } = require('@hapi/boom');
 const TodoModel = require('../models/todoModel');
 const TodoSchema = require('../schemas/todoSchema');
 
@@ -14,12 +15,16 @@ const createTodo = async (text) => {
 
 const editTodo = async (id, text) => {
   TodoSchema.validateTodo(text);
-  await TodoModel.editTodoBank(id, text);
+  const { matchedCount } = await TodoModel.editTodoBank(id, text);
+
+  if (matchedCount === 0) throw notFound('task not found');
   return true;
 };
 
 const deleteTodo = async (id) => {
-  await TodoModel.deleteTodoBank(id);
+  const { deletedCount } = await TodoModel.deleteTodoBank(id);
+
+  if (deletedCount === 0) throw notFound('task not found');
   return true;
 };
 
