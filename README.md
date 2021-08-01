@@ -82,4 +82,12 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
 
 ## Endpoints da API (Criação, leitura, edição, deleção de tarefa)
 
-1. #### `POST` 
+1. #### `POST` localhost:3000/todo/create
+
+2. #### `GET` localhost:3000/todo/list
+
+3. #### `PATCH` localhost:3000/todo/update
+
+4. #### `DELETE` localhost:3000/todo/delete
+
+# cada endpoint tera sua explicação em breve
