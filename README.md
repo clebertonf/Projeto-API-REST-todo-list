@@ -97,6 +97,8 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
   ![texto maior 200 caracteres](./public/imgs/05-campo-maior-200-caracteres.png)
 
 2. #### `GET` localhost:3000/todo/list
+  Este endpoint lista todas as tarefas cadatradas no banco de dados da API.
+   ![texto maior 200 caracteres](./public/imgs/06-listar-tarefas.png)
 
 3. #### `PATCH` localhost:3000/todo/update
 
