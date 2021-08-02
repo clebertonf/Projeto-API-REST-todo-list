@@ -98,10 +98,12 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
 
 2. #### `GET` localhost:3000/todo/list
   Este endpoint lista todas as tarefas cadatradas no banco de dados da API.
-   ![texto maior 200 caracteres](./public/imgs/06-listar-tarefas.png)
+   ![lista tarefas](./public/imgs/06-listar-tarefas.png)
 
 3. #### `PATCH` localhost:3000/todo/update
-
+  Este endpoint edita uma tarefa conforme o id passado na requisição. Caso a edição 
+  acontecer com sucesso o retorno será conforme abaixo:
+   ![edit tarefa](./public/imgs/07-editar-tarefa.png)
 4. #### `DELETE` localhost:3000/todo/delete
 
 # cada endpoint tera sua explicação em breve
