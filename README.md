@@ -125,4 +125,4 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
   ![id inexistente](./public/imgs/10-task-not-found-delete.png)
 
 
-# cada endpoint tera sua explicação em breve
+#### Muito obrigado por ler ate aqui, qualquer contribuição será bem vinda! ate a proxima!
