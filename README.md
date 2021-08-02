@@ -104,6 +104,14 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
   Este endpoint edita uma tarefa conforme o id passado na requisição. Caso a edição 
   acontecer com sucesso o retorno será conforme abaixo:
    ![edit tarefa](./public/imgs/07-editar-tarefa.png)
+
+- Validações:
+  - Se for passado campo text vazio:
+  ![campo vazio](./public/imgs/08-campo-vazio.png)
+
+  - Se passar um id inexistente:
+  ![id que  não existe](./public/imgs/09-task-not-found.png)
+  
 4. #### `DELETE` localhost:3000/todo/delete
 
 # cada endpoint tera sua explicação em breve
