@@ -83,6 +83,11 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
 ## Endpoints da API (Criação, leitura, edição, deleção de tarefa)
 
 1. #### `POST` localhost:3000/todo/create
+  Este endpoint cadastra uma tarefa no banco de dados, basta passar um JSON  na
+  requisição do tipo POST com chave TEXT e a tarefa a ser cadastrada. O retorno da
+  API é conforme a iamgem abaixo:
+
+  ![](./public/imgs/03-cadstro-tarefa.png)
 
 2. #### `GET` localhost:3000/todo/list
 
