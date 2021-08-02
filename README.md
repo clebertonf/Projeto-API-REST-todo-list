@@ -116,5 +116,13 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
   ![texto maior 200 caracteres](./public/imgs/12-texto-miaor-200-edit-task.png)
 
 4. #### `DELETE` localhost:3000/todo/delete
+  Este endpoint deleta uma tarefa do banco de dados a partir de um id passado na requisição,
+  caso a deleção acontecer com sucesso, o retorno será conform abaixo:
+  ![deletado com sucesso](./public/imgs/10-task-not-found-delete.png)
+
+  - Validações:
+  - Se for passado id inexistente:
+  ![id inexistente](./public/imgs/0.png)
+
 
 # cada endpoint tera sua explicação em breve
