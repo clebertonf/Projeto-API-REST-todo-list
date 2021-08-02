@@ -111,7 +111,10 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
 
   - Se passar um id inexistente:
   ![id que  não existe](./public/imgs/09-task-not-found.png)
-  
+
+  - Se for passado um texto maior que 200 caracteres:
+  ![texto maior 200 caracteres](./public/imgs/12-texto-miaor-200-edit-task.png)
+
 4. #### `DELETE` localhost:3000/todo/delete
 
 # cada endpoint tera sua explicação em breve
