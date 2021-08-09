@@ -57,7 +57,7 @@ Fique a vontade para contribuir, será um prazer interagir com você!
 2. [Insomnia](https://insomnia.rest/download) para fazer requisições nas rotas da API. (ou qualquer outro para testes de API)
 3. [NodeJS](https://nodejs.org/en/) Este projeto necessita do NodeJs instalado em seu computador para rodar localmente.
 
-#### proximos passos
+#### próximos passos
 
 - Clone o repositório `git clone git@github.com:clebertonf/Projeto-API-REST-todo-list.git`
 - Na raiz do projeto rode o comando **npm install** para instalar as depedências do projeto.
@@ -117,7 +117,7 @@ Verifique o `package.json`, la se encontram scripts para execução do projeto.
 
 4. #### `DELETE` localhost:3000/todo/delete
   Este endpoint deleta uma tarefa do banco de dados a partir de um id passado na requisição,
-  caso a deleção acontecer com sucesso, o retorno será conform abaixo:
+  caso a deleção acontecer com sucesso, o retorno será conforme abaixo:
   ![deletado com sucesso](./public/imgs/11-deleted.png)
 
   - Validações:
