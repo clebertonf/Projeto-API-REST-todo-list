@@ -1,4 +1,4 @@
-## API Rest de um sistema Todo list em Node.JS :desktop_computer:
+## API Rest sistema Todo list em Node.JS :desktop_computer:
 
 Olá seja bem vindo ao repositorio do projeto API todo list (lista de afazeres). :rocket:
 
